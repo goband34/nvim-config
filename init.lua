@@ -22,10 +22,10 @@ global_set.clipboard = {
   cache_enabled = 0
 }
 
+require('plugins')
+vim.cmd('colorscheme duskfox')
+
 require('commands')
 vim.keymap.set('', '<Leader>as', openColorSelectPopup)
-
-vim.cmd('colorscheme duskfox')
-require('plugins')
 
 vim.keymap.set('', '<Leader>q', ':bp<bar>sp<bar>bn<bar>bd<enter>')

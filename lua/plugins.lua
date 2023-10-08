@@ -22,6 +22,8 @@ require('packer').startup(function(use)
     }
 
     use 'EdenEast/nightfox.nvim' 
+
+    use 'mattn/emmet-vim'
 end)
 
 -- nvim-tree config
