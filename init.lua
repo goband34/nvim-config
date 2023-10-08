@@ -1,15 +1,18 @@
-local global_set = vim.g
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 local set = vim.opt
 
 set.tabstop = 2
 set.shiftwidth = 2
 set.expandtab = true
 set.encoding = 'utf-8'
-global_set.autoindent = true
+set.autoindent = true
 set.number = true
 set.relativenumber = true
 
-global_set.clipboard = {
+
+vim.g.clipboard = {
   name = 'WslClipboard',
   copy = {
     ["+"] = 'clip.exe',
