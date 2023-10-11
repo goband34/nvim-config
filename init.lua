@@ -32,3 +32,5 @@ require('commands')
 vim.keymap.set('', '<Leader>as', openColorSelectPopup)
 
 vim.keymap.set('', '<Leader>q', ':bp<bar>sp<bar>bn<bar>bd<enter>')
+
+require('lspconfig_config')
