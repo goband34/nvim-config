@@ -26,7 +26,7 @@ vim.g.clipboard = {
 }
 
 require('plugins')
-vim.cmd('colorscheme duskfox')
+vim.cmd('colorscheme dayfox')
 
 vim.keymap.set('', '<Leader>as', openColorSelectPopup)
 

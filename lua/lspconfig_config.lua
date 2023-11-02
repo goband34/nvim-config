@@ -1,5 +1,6 @@
 local lspconfig = require('lspconfig')
 lspconfig.ocamllsp.setup {}
+lspconfig.rust_analyzer.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

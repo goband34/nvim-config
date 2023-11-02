@@ -38,3 +38,17 @@ function openColorSelectPopup()
   vim.api.nvim_win_set_option(w, 'cursorline', true)
   vim.api.nvim_win_set_cursor(w, {current_index, 0})
 end
+
+function filterQuickfixList(opts)
+  local qfentries = vim.fn.getqflist() 
+  local res = {}
+  local query = opts.fargs[1]
+  for i,v in ipairs(qfentries) do
+    if not(string.match(vim.fn.bufname(v.bufnr), query)) then
+      table.insert(res, v)
+    end
+  end
+  vim.fn.setqflist(res, 'r')
+end
+
+vim.api.nvim_create_user_command("MyFilterQf", filterQuickfixList, { nargs=1 })
